@@ -40,6 +40,7 @@ function App() {
     return (
         <>
             <div className="main_container">
+                {/*<div>https://github.com/coolcrazyfox/razborka-react-app/settings/pages</div>*/}
                 <div className="tab_container">
                     <table className="table">
                         <thead>
