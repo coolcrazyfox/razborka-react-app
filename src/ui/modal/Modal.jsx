@@ -4,10 +4,10 @@ import s from '../../style/Modal.module.css'
 const Modal = ({active, setActive}) => {
     return (
         <div className={s.modal}>
-            <div className="modal_container">
-                <div className="modal_box">
-                    <div className="tab_container">
-                        <table className="table">
+            <div className={s.modal_container}>
+                <div className={s.modal_box}>
+                    <div className={s.tab_container}>
+                        <table className={s.table}>
                             <thead>
                             <tr>
                                 <th>Country</th>
