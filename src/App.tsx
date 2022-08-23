@@ -52,7 +52,7 @@ function App() {
                             <th>Ebay $</th>
                             <th>Склад $</th>
                             <th>Link</th>
-                            <th>Image</th>
+
                         </tr>
                         </thead>
                         <tbody>
@@ -67,10 +67,6 @@ function App() {
                                 <a href="https://www.ebay.de/sch/i.html?_from=R40&_nkw=89815-50020&_sacat=0&_sop=2&rt=nc&LH_ItemCondition=4">https://www.ebay.de/sch/i.html?_from=R40&_nkw=89815-50020&_sacat=0&_sop=2&rt=nc&LH_ItemCondition=4
 
                                 </a>
-                            </td>
-                            <td>
-                                <img src={'https://i.ebayimg.com/thumbs/images/g/UNAAAOSwgHxg9uaq/s-l225.webp'}
-                                     alt={'#'}/>
                             </td>
                         </tr>
                         <tr>
@@ -213,6 +209,7 @@ function App() {
                                     <th>OEM</th>
                                     <th>Date</th>
                                     <th>Link</th>
+                                    <th>Image</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -225,6 +222,10 @@ function App() {
                                         <a href="https://www.ebay.de/sch/i.html?_from=R40&_nkw=89815-50020&_sacat=0&_sop=2&rt=nc&LH_ItemCondition=4">https://www.ebay.de/sch/i.html?_from=R40&_nkw=89815-50020&_sacat=0&_sop=2&rt=nc&LH_ItemCondition=4
 
                                         </a>
+                                    </td>
+                                    <td>
+                                        <img src={'https://i.ebayimg.com/thumbs/images/g/UNAAAOSwgHxg9uaq/s-l225.webp'}
+                                             alt={'#'}/>
                                     </td>
                                 </tr>
                                 <tr>
