@@ -41,8 +41,13 @@ function App() {
 // }
     return (
         <>
+
             <div className="main_container">
+                <div>
+                    <button onClick={()=>setModalActive(true)}>Open </button>
+                </div>
                 {/*<div>https://github.com/coolcrazyfox/razborka-react-app/settings/pages</div>*/}
+
                 <div className="tab_container">
                     <table className="table">
                         <thead>
@@ -255,6 +260,7 @@ function App() {
 
 
             </div>
+
             <Modal active={modalActive} setActive={setModalActive}/>
 
         </>
