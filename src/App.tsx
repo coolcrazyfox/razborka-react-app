@@ -238,6 +238,10 @@ function App() {
 
                                         </a>
                                     </td>
+                                    <td>
+                                        <img src={'https://i.ebayimg.com/thumbs/images/g/UNAAAOSwgHxg9uaq/s-l225.webp'}
+                                             alt={'#'}/>
+                                    </td>
                                 </tr>
                                 </tbody>
                             </table>
