@@ -1,0 +1,10 @@
+.search_container{
+    max-width: 600px;
+    min-width: auto;
+    font-family: Alef   sans-serif;
+}
+.search_box{
+    display: flex;
+    justify-content: center;
+   flex-direction: column;
+}
