@@ -19,12 +19,12 @@
     /*transform: scale(1);*/
 }
 .modal_content{
-    padding-right: 20px;
+    /*padding-right: 20px;*/
     border-radius: 12px;
     background: rgb(185, 210, 203);
     transform: scale(0.5);
     transition: 0.4s all;
-    width: 50vw;
+    /*width: 50vw;*/
 
     /*height: 200px;*/
     /*width: 400px;*/
