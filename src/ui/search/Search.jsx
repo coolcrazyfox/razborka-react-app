@@ -39,8 +39,9 @@ const Search = () => {
                        placeholder={'Search OEM car'}
                        onChange={(e) =>setSearchTerm(e.target.value)}
                        className={s.input_search}
+                       style={{width:"600px"}}
                 />
-                <Carlist carList={carList}/>
+                {/*<Carlist carList={carList}/>*/}
                 {/*<ul className={s.tab_search}>*/}
                 {/*    {carList.map((car, index)=>{*/}
                 {/*        return <li key={index} className={s.search_item}>{car.car_module}</li>*/}

@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 
 import './App.css';
 import Modal from './ui/modal/Modal';
+import Search from "./ui/search/Search";
 
 function App() {
     const [modalActive, setModalActive] = useState(true)
@@ -47,6 +48,7 @@ function App() {
                 <div>
                     <button onClick={() => setModalActive(true)}>Open modal</button>
                 </div>
+                <Search/>
 
                 <div className="tab_container">
                     <table className="table">
@@ -206,6 +208,7 @@ function App() {
                 {/*</div>*/}
 
             </div>
+
             <Modal active={modalActive} setActive={setModalActive}>
                 {/*{children}*/}
             </Modal>
