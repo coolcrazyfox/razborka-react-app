@@ -52,6 +52,7 @@ function App() {
                             <th>Ebay $</th>
                             <th>Склад $</th>
                             <th>Link</th>
+                            <th>Image</th>
                         </tr>
                         </thead>
                         <tbody>
