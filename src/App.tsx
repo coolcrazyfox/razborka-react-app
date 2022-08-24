@@ -210,7 +210,7 @@ function App() {
             </div>
 
             <Modal active={modalActive} setActive={setModalActive}>
-                {/*{children}*/}
+                {children}
             </Modal>
 
 
