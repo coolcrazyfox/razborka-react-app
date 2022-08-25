@@ -39,7 +39,7 @@ const Search = () => {
                        placeholder={'Search OEM car'}
                        onChange={(e) =>setSearchTerm(e.target.value)}
                        className={s.input_search}
-                       style={{width:"600px"}}
+                       style={{width:"200px"}}
                 />
                 {/*<Carlist carList={carList}/>*/}
                 {/*<ul className={s.tab_search}>*/}

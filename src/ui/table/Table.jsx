@@ -1,10 +1,12 @@
 import React from 'react';
-import '../../style/Table.module.css'
+import s from '../../style/Table.module.css'
+import MOCK_DATA from "../../MOCK_DATA.json";
+const initional = MOCK_DATA
 const Table = () => {
     return (
         <div>
-            <div className="tab_container">
-                <table className="table">
+            <div className={s.tab_container}>
+                <table className={s.table}>
                     <thead>
                     <tr>
                         <th>Model</th>
