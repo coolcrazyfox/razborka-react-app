@@ -7,7 +7,7 @@ import s from "../style/Table.module.css";
 import OEM_DATA from "../OEM_DATA.json";
 const data = OEM_DATA;
 
-const TabPage = () => {
+const TabPage = ({oemList}) => {
     const [itemCarList, setItemCarList]=useState(data)
     const {loading, error, products} = useProducts()
     return (
@@ -40,8 +40,17 @@ const TabPage = () => {
                     {/*</ul>*/}
 
 
-                        {products.map(pr => {
-                        return <Table key={pr.id} model={pr} />
+                        {oemList.map((car) => {
+                        return <Table key={car.id}
+                                      // model={car}
+                                      car_model={car.car_model}
+                                      car_model_title={car.car_model_title}
+                                      car_OEM={car.car_OEM}
+                                      date={car.date}
+                                      shop_price={car.shop_price}
+                                      warehouse={car.warehouse}
+                                      link={car.link}
+                            />
 
                         // <td>Маховик</td>
                         // <td>89815-50020</td>

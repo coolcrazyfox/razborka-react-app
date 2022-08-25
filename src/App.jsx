@@ -16,7 +16,7 @@ function App() {
                     <button onClick={() => setModalActive(true)}>Open modal</button>
                 </div>
                 {/*<Search/>*/}
-                <TabPage/>
+                <TabPage />
 
                 {/*<div className="tab_container">*/}
                 {/*    <table className="table">*/}
