@@ -33,7 +33,7 @@ const Table = ({model}:ModelProductProps) => {
                         <td>200</td>
                         <td>190</td>
                         <td>
-                            <a href="{}">https://www.ebay.de/sch/i.html?_from=R40&_nkw=89815-50020&_sacat=0&_sop=2&rt=nc&LH_ItemCondition=4
+                            <a href="#">https://www.ebay.de/sch/i.html?_from=R40&_nkw=89815-50020&_sacat=0&_sop=2&rt=nc&LH_ItemCondition=4
 
                             </a>
                         </td>
