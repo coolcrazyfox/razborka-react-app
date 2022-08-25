@@ -7,7 +7,7 @@ import Carlist from "../components/Carlist";
 
 const data = MOCK_DATA;
 
-// const data=[{},{},{}]
+
 const filterCars=(searchText, listOfCars)=>{
     if(!searchText){
         return listOfCars

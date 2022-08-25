@@ -28,7 +28,7 @@
 .table thead tr th:last-child {
     border-radius: 0 8px 8px 0;
 }
-.table tbody td {
+.table tbody td  {
     text-align: left;
     border: none;
     padding: 10px 15px;

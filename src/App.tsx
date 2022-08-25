@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import './App.css';
 import Modal from './ui/modal/Modal';
 import Search from "./ui/search/Search";
-import Table from "./ui/table/Table";
+import TabPage from "./pages/TabPage";
 
 function App() {
     const [modalActive, setModalActive] = useState(true)
@@ -15,8 +15,8 @@ function App() {
                 <div>
                     <button onClick={() => setModalActive(true)}>Open modal</button>
                 </div>
-                <Search/>
-                <Table/>
+                {/*<Search/>*/}
+                <TabPage/>
 
                 {/*<div className="tab_container">*/}
                 {/*    <table className="table">*/}
