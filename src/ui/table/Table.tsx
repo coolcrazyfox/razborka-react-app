@@ -1,9 +1,13 @@
 import React, {useState} from 'react';
-import s from '../../style/Table.module.css'
-import OEM_DATA from "../../OEM_DATA.json";
-const initional = OEM_DATA
-const Table = () => {
-    const [carModel, setCarModel]=useState(initional)
+import s from '../../style/Table.module.css';
+import {IProduct} from "../../models";
+
+interface ModelProductProps {
+    model: IProduct
+}
+
+const Table = ({model}:ModelProductProps) => {
+    const [carModel, setCarModel]=useState(false)
     return (
         <div>
             <div className={s.tab_container}>
