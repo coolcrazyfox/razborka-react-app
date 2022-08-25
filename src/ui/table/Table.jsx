@@ -1,8 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 import s from '../../style/Table.module.css'
-import MOCK_DATA from "../../MOCK_DATA.json";
-const initional = MOCK_DATA
+import OEM_DATA from "../../OEM_DATA.json";
+const initional = OEM_DATA
 const Table = () => {
+    const [carModel, setCarModel]=useState(initional)
     return (
         <div>
             <div className={s.tab_container}>
@@ -28,7 +29,7 @@ const Table = () => {
                         <td>200</td>
                         <td>190</td>
                         <td>
-                            <a href="https://www.ebay.de/sch/i.html?_from=R40&_nkw=89815-50020&_sacat=0&_sop=2&rt=nc&LH_ItemCondition=4">https://www.ebay.de/sch/i.html?_from=R40&_nkw=89815-50020&_sacat=0&_sop=2&rt=nc&LH_ItemCondition=4
+                            <a href="{}">https://www.ebay.de/sch/i.html?_from=R40&_nkw=89815-50020&_sacat=0&_sop=2&rt=nc&LH_ItemCondition=4
 
                             </a>
                         </td>
