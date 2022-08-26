@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     width: 95%;
-    background: red;
+    /*background: red;*/
 }
 .tab_container{
     display: flex;
@@ -15,6 +15,8 @@
     top: -125px;
     border-radius: 8px;
     padding: 2px;
+    background: rgba(187, 187, 187, 0.65);
+
 }
 .table {
     width: 100%;
@@ -26,7 +28,7 @@
     text-align: left;
     border: none;
     padding: 10px 15px;
-    background: #7cf5a088;
+    background: rgba(124, 245, 160, 0.6);
     font-size: 14px;
 }
 .table thead tr th:first-child {
@@ -39,7 +41,7 @@
     text-align: left;
     border: none;
     padding: 10px 15px;
-    font-size: 10px;
+    font-size: 11px;
     vertical-align: top;
 }
 .table tbody tr:nth-child(even){
