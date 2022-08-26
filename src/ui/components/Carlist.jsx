@@ -8,9 +8,6 @@ const Carlist = ({ carList, searchTerm }) => {
                 return (
                     <Car
                         key={index}
-                        carCompany={car.car_company}
-                        // carModel={car.car_model}
-                        carYear={car.car_year}
                         car_model={car.car_model}
                         car_model_title={car.car_model_title}
                         car_OEM={car.car_OEM}
