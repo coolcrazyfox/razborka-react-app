@@ -5,6 +5,7 @@ import s from '../../style/Search.module.css';
 // import MOCK_DATA from './../../MOCK_DATA.json';
 import OEM_DATA from './../../OEM_DATA.json';
 import Carlist from "../components/Carlist";
+import TabPage from "../../pages/TabPage";
 
 // const data = MOCK_DATA;
 const data = OEM_DATA;
@@ -14,8 +15,11 @@ const filterCars=(searchText, listOfCars)=>{
     if(!searchText){
         return listOfCars
     }
-    return listOfCars.filter(({car_model})=>
-    car_model.toLowerCase().includes(searchText.toLowerCase())
+    // return listOfCars.filter(({car_model})=>
+    //     car_model.toLowerCase().includes(searchText.toLowerCase())
+    // )
+    return listOfCars.filter(({car_OEM})=>
+        car_OEM.toLowerCase().includes(searchText.toLowerCase())
     )
 
 }
@@ -32,8 +36,8 @@ const Search = () => {
     },[searchTerm])
 
     return (
-        <div className={s.search_container}>
-            <div className={s.search_box}>
+        <div className={s.wrap}>
+            {/*<div className={s.search_box}>*/}
                 <input type="text"
                        value={searchTerm}
                        autoFocus
@@ -43,13 +47,19 @@ const Search = () => {
                        className={s.input_search}
                        style={{width:"200px"}}
                 />
-                <Carlist carList={carList}/>
+            <button
+                // onClick={BtnHandler}
+                className={s.btnSearch}
+                // style={{backgroundImage:"url(./Icon)"}}
+            ></button>
+                {/*<TabPage oemList={carList}/>*/}
+                {/*<Carlist carList={carList}/>*/}
                 {/*<ul className={s.tab_search}>*/}
                 {/*    {carList.map((car, index)=>{*/}
                 {/*        return <li key={index} className={s.search_item}>{car.car_module}</li>*/}
                 {/*    })}*/}
                 {/*</ul>*/}
-            </div>
+            {/*</div>*/}
 
         </div>
     );

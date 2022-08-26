@@ -4,17 +4,21 @@ import ErrorMessage from '../ui/components/ErrorMessage';
 import Loader from '../ui/components/Loader';
 import Table from "../ui/table/Table";
 import s from "../style/Table.module.css";
+import Search from "../ui/search/Search";
+
 
 
 const TabPage = ({oemList}) => {
     const {loading, error, products} = useProducts()
     return (
-        <div>
+        <div >
             {loading && <Loader/>}
             {error && <ErrorMessage error={error}/>}
+
             <div className={s.tab_container}>
                 <table className={s.table}>
                     <thead>
+                    <Search/>
                     <tr>
                         <th>Model</th>
                         <th>Titile</th>

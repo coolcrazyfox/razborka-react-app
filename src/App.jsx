@@ -15,14 +15,15 @@ function App() {
     return (
         <>
 
+
             <div className="main_container">
                 {/*<div>https://github.com/coolcrazyfox/razborka-react-app/settings/pages</div>*/}
-                <div>
-                    <Search/>
+                <div className={'search_container'}>
+
                     <button onClick={() => setModalActive(true)}>Open modal</button>
                 </div>
-                {/*<Search/>*/}
                 <TabPage oemList={itemCarList}/>
+
 
             </div>
 
