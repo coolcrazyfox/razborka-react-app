@@ -4,9 +4,13 @@ import './App.css';
 import Modal from './ui/modal/Modal';
 import Search from "./ui/search/Search";
 import TabPage from "./pages/TabPage";
+import OEM_DATA from "./OEM_DATA.json";
 
+
+const data = OEM_DATA;
 function App() {
-    const [modalActive, setModalActive] = useState(true)
+    const [itemCarList, setItemCarList]=useState(data)
+    const [modalActive, setModalActive] = useState(false)
     return (
         <>
 
@@ -16,7 +20,7 @@ function App() {
                     <button onClick={() => setModalActive(true)}>Open modal</button>
                 </div>
                 {/*<Search/>*/}
-                <TabPage />
+                <TabPage oemList={itemCarList}/>
 
                 {/*<div className="tab_container">*/}
                 {/*    <table className="table">*/}

@@ -9,8 +9,15 @@ const Carlist = ({ carList, searchTerm }) => {
                     <Car
                         key={index}
                         carCompany={car.car_company}
-                        carModel={car.car_model}
+                        // carModel={car.car_model}
                         carYear={car.car_year}
+                        car_model={car.car_model}
+                        car_model_title={car.car_model_title}
+                        car_OEM={car.car_OEM}
+                        date={car.date}
+                        shop_price={car.shop_price}
+                        warehouse={car.warehouse}
+                        link={car.link}
                     />
                 )
             })}

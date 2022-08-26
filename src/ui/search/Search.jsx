@@ -2,10 +2,12 @@ import React, {useEffect, useState} from 'react';
 import s from '../../style/Search.module.css';
 
 
-import MOCK_DATA from './../../MOCK_DATA.json';
+// import MOCK_DATA from './../../MOCK_DATA.json';
+import OEM_DATA from './../../OEM_DATA.json';
 import Carlist from "../components/Carlist";
 
-const data = MOCK_DATA;
+// const data = MOCK_DATA;
+const data = OEM_DATA;
 
 
 const filterCars=(searchText, listOfCars)=>{
@@ -41,7 +43,7 @@ const Search = () => {
                        className={s.input_search}
                        style={{width:"200px"}}
                 />
-                {/*<Carlist carList={carList}/>*/}
+                <Carlist carList={carList}/>
                 {/*<ul className={s.tab_search}>*/}
                 {/*    {carList.map((car, index)=>{*/}
                 {/*        return <li key={index} className={s.search_item}>{car.car_module}</li>*/}

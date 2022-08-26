@@ -40,8 +40,8 @@ const TabPage = ({oemList}) => {
                     {/*</ul>*/}
 
 
-                        {oemList.map((car) => {
-                        return <Table key={car.id}
+                        {oemList.map((car, index) => {
+                        return <Table key={index}
                                       // model={car}
                                       car_model={car.car_model}
                                       car_model_title={car.car_model_title}
