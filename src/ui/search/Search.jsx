@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import s from '../../style/Search.module.css';
 
 
+
 // import MOCK_DATA from './../../MOCK_DATA.json';
 import OEM_DATA from './../../OEM_DATA.json';
 import Carlist from "../components/Carlist";
@@ -27,6 +28,7 @@ const filterCars=(searchText, listOfCars)=>{
 
 }
 const Search = () => {
+    const [itemCarPag,setItemCarPag]= useState(data.slice(0,30))
     const [carList, setCarList]= useState(data)
     const [searchTerm, setSearchTerm]= useState('')
     const handlerEnterSearch =(event)=>{

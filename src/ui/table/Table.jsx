@@ -22,6 +22,7 @@ import React, {useState} from 'react';
 
 const Table = ({car_model, car_model_title, car_OEM, date, shop_price, warehouse, link }) => {
     // const [carModel, setCarModel]=useState(defaultCarItems)
+
     return (
         <tr>
 

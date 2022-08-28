@@ -1,17 +1,37 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {useProducts} from '../hook/products';
 import ErrorMessage from '../ui/components/ErrorMessage';
 import Loader from '../ui/components/Loader';
 import Table from "../ui/table/Table";
 import s from "../style/Table.module.css";
 import Search from "../ui/search/Search";
+import OEM_DATA from "../OEM_DATA.json";
 
-
+// const data = OEM_DATA;
 
 const TabPage = ({oemList}) => {
+    const [itemCarList, setItemCarList] = useState(oemList.slice(0, 20))
     const {loading, error, products} = useProducts()
+    const [pageNumber, setPageNumber] = useState(0)
+
+    const carsPerPage = 10
+    const pagesVisited = pageNumber * carsPerPage
+    const displayItemCarList = itemCarList
+        .slice(pagesVisited, pagesVisited + carsPerPage)
+        .map(i => {
+            return <Table
+                key={i.index}
+                car_model={i.car_model}
+                car_model_title={i.car_model_title}
+                car_OEM={i.car_OEM}
+                date={i.date}
+                shop_price={i.shop_price}
+                warehouse={i.warehouse}
+                link={i.link}
+            />
+        })
     return (
-        <div >
+        <div>
             {loading && <Loader/>}
             {error && <ErrorMessage error={error}/>}
 
@@ -31,17 +51,18 @@ const TabPage = ({oemList}) => {
                     </tr>
                     </thead>
                     <tbody>
-                    {oemList.map((car, index) => {
-                        return <Table key={index}
-                                      car_model={car.car_model}
-                                      car_model_title={car.car_model_title}
-                                      car_OEM={car.car_OEM}
-                                      date={car.date}
-                                      shop_price={car.shop_price}
-                                      warehouse={car.warehouse}
-                                      link={car.link}
-                        />
-                    })}
+                    {displayItemCarList}
+                    {/*{oemList.map((car, index) => {*/}
+                    {/*    return <Table key={index}*/}
+                    {/*                  car_model={car.car_model}*/}
+                    {/*                  car_model_title={car.car_model_title}*/}
+                    {/*                  car_OEM={car.car_OEM}*/}
+                    {/*                  date={car.date}*/}
+                    {/*                  shop_price={car.shop_price}*/}
+                    {/*                  warehouse={car.warehouse}*/}
+                    {/*                  link={car.link}*/}
+                    {/*    />*/}
+                    {/*})}*/}
                     </tbody>
                 </table>
             </div>
