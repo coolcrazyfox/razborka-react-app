@@ -59,17 +59,17 @@ const Search = () => {
                        className={s.input_search}
                        style={{width:"200px"}}
                 />
-            <SuperButton onClick={handlerEnterSearch}
-                         onChange={(e) =>setSearchTerm(e.currentTarget.value)}>
-                Enter
-            </SuperButton>
+            {/*<SuperButton onClick={handlerEnterSearch}*/}
+            {/*             onChange={(e) =>setSearchTerm(e.currentTarget.value)}>*/}
+            {/*    Enter*/}
+            {/*</SuperButton>*/}
 
-            {/*<button*/}
-            {/*    onClick={handlerEnterSearch}*/}
-            {/*    onChange={(e) =>setSearchTerm(e.target.value)}*/}
-            {/*    className={s.btnSearch}*/}
-            {/*    // style={{backgroundImage:"url(./Icon)"}}*/}
-            {/*></button>*/}
+            <button
+                onClick={handlerEnterSearch}
+                onChange={(e) =>setSearchTerm(e.target.value)}
+                className={s.btnSearch}
+                // style={{backgroundImage:"url(./Icon)"}}
+            ></button>
 
                 {/*<TabPage oemList={carList}/>*/}
                 {/*<Carlist carList={carList}/>*/}
