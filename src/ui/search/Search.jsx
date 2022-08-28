@@ -8,6 +8,7 @@ import OEM_DATA from './../../OEM_DATA.json';
 import Carlist from "../components/Carlist";
 import TabPage from "../../pages/TabPage";
 import SuperButton from "../../common/SuperButton/SupperButton";
+import Modal from "../modal/Modal";
 
 // const data = MOCK_DATA;
 const data = OEM_DATA;
@@ -28,15 +29,16 @@ const filterCars=(searchText, listOfCars)=>{
 
 }
 const Search = () => {
-    const [itemCarPag,setItemCarPag]= useState(data.slice(0,30))
+    const [modalActive, setModalActive] = useState(false)
+    const [itemCarPag,setItemCarPag]= useState(data.slice(0,50))
     const [carList, setCarList]= useState(data)
     const [searchTerm, setSearchTerm]= useState('')
-    const handlerEnterSearch =(event)=>{
-        if (event.key ==="Enter" || event.onClick){
-            console.log(searchTerm)
-            alert(searchTerm)
-        }
-    }
+    // const handlerEnterSearch =(event)=>{
+    //     if (event.key ==="Enter" || event.onClick){
+    //         console.log(searchTerm)
+    //         alert(searchTerm)
+    //     }
+    // }
     useEffect(()=>{
         const Debounce =setTimeout(()=> {
             const filteredCars = filterCars(searchTerm, data)
@@ -51,10 +53,10 @@ const Search = () => {
             {/*<div className={s.search_box}>*/}
                 <input type="text"
                        value={searchTerm}
-                       // autoFocus
-                       // autoComplete={'off'}
+                       autoFocus
+                       autoComplete={'off'}
                        placeholder={'Search OEM car'}
-                       onKeyDown={handlerEnterSearch}
+                       // onKeyDown={handlerEnterSearch}
                        onChange={(e) =>setSearchTerm(e.target.value)}
                        className={s.input_search}
                        style={{width:"200px"}}
@@ -65,11 +67,15 @@ const Search = () => {
             {/*</SuperButton>*/}
 
             <button
-                onClick={handlerEnterSearch}
-                onChange={(e) =>setSearchTerm(e.target.value)}
+                onClick={() => setModalActive(true)}
+                // onClick={handlerEnterSearch}
+                // onChange={(e) =>setSearchTerm(e.target.value)}
                 className={s.btnSearch}
                 // style={{backgroundImage:"url(./Icon)"}}
             ></button>
+            <Modal active={modalActive} setActive={setModalActive} oemList={itemCarPag}>
+                {/*{children}*/}
+            </Modal>
 
                 {/*<TabPage oemList={carList}/>*/}
                 {/*<Carlist carList={carList}/>*/}

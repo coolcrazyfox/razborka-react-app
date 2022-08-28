@@ -10,8 +10,9 @@ import ReactPaginate from "react-paginate";
 
 // const data = OEM_DATA;
 
+
 const TabPage = ({oemList}) => {
-    const [itemCarList, setItemCarList] = useState(oemList.slice(0, 51))
+    const [itemCarList, setItemCarList] = useState(oemList.slice(0, 50))
     const {loading, error, products} = useProducts()
     const [pageNumber, setPageNumber] = useState(0)
 
