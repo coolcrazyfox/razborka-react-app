@@ -6,11 +6,12 @@ import Table from "../ui/table/Table";
 import s from "../style/Table.module.css";
 import Search from "../ui/search/Search";
 import OEM_DATA from "../OEM_DATA.json";
+import ReactPaginate from "react-paginate";
 
 // const data = OEM_DATA;
 
 const TabPage = ({oemList}) => {
-    const [itemCarList, setItemCarList] = useState(oemList.slice(0, 20))
+    const [itemCarList, setItemCarList] = useState(oemList.slice(0, 51))
     const {loading, error, products} = useProducts()
     const [pageNumber, setPageNumber] = useState(0)
 
@@ -30,6 +31,10 @@ const TabPage = ({oemList}) => {
                 link={i.link}
             />
         })
+    const pageCountItem = Math.ceil(itemCarList.length/carsPerPage)
+    const changePage = ({selected}) =>{
+        setPageNumber(selected)
+    }
     return (
         <div>
             {loading && <Loader/>}
@@ -52,6 +57,17 @@ const TabPage = ({oemList}) => {
                     </thead>
                     <tbody>
                     {displayItemCarList}
+                    <ReactPaginate
+                        onPageChange={changePage}
+                        previousLabel={'<'}
+                        nextLabel={'>'}
+                        pageCount={pageCountItem}
+                        containerClassName={s.paginationBttns}
+                        previousLinkClassName={s.previousBttn}
+                        nextLinkClassName={s.nextBttn}
+                        disabledClassName={s.paginationDisabled}
+                        activeClassName={s.paginationActive}
+                    />
                     {/*{oemList.map((car, index) => {*/}
                     {/*    return <Table key={index}*/}
                     {/*                  car_model={car.car_model}*/}
