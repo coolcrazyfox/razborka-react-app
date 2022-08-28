@@ -6,12 +6,12 @@ import s from '../../style/Search.module.css';
 import OEM_DATA from './../../OEM_DATA.json';
 import Carlist from "../components/Carlist";
 import TabPage from "../../pages/TabPage";
+import SuperButton from "../../common/SuperButton/SupperButton";
 
 // const data = MOCK_DATA;
 const data = OEM_DATA;
 
-// тип пропсов обычной кнопки, children в котором храниться название кнопки там уже описан
-type DefaultButtonPropsType = DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>
+
 
 
 const filterCars=(searchText, listOfCars)=>{
@@ -30,9 +30,9 @@ const Search = () => {
     const [carList, setCarList]= useState(data)
     const [searchTerm, setSearchTerm]= useState('')
     const handlerEnterSearch =(event)=>{
-        if (event.key ==="Enter" || event.onClick()){
+        if (event.key ==="Enter" || event.onClick){
             console.log(searchTerm)
-            // alert(searchTerm)
+            alert(searchTerm)
         }
     }
     useEffect(()=>{
@@ -57,12 +57,18 @@ const Search = () => {
                        className={s.input_search}
                        style={{width:"200px"}}
                 />
-            <button
-                onClick={handlerEnterSearch}
-                onChange={(e) =>setSearchTerm(e.target.value)}
-                className={s.btnSearch}
-                // style={{backgroundImage:"url(./Icon)"}}
-            ></button>
+            <SuperButton onClick={handlerEnterSearch}
+                         onChange={(e) =>setSearchTerm(e.currentTarget.value)}>
+                Enter
+            </SuperButton>
+
+            {/*<button*/}
+            {/*    onClick={handlerEnterSearch}*/}
+            {/*    onChange={(e) =>setSearchTerm(e.target.value)}*/}
+            {/*    className={s.btnSearch}*/}
+            {/*    // style={{backgroundImage:"url(./Icon)"}}*/}
+            {/*></button>*/}
+
                 {/*<TabPage oemList={carList}/>*/}
                 {/*<Carlist carList={carList}/>*/}
                 {/*<ul className={s.tab_search}>*/}
