@@ -10,6 +10,9 @@ import TabPage from "../../pages/TabPage";
 // const data = MOCK_DATA;
 const data = OEM_DATA;
 
+// тип пропсов обычной кнопки, children в котором храниться название кнопки там уже описан
+type DefaultButtonPropsType = DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>
+
 
 const filterCars=(searchText, listOfCars)=>{
     if(!searchText){
@@ -26,6 +29,12 @@ const filterCars=(searchText, listOfCars)=>{
 const Search = () => {
     const [carList, setCarList]= useState(data)
     const [searchTerm, setSearchTerm]= useState('')
+    const handlerEnterSearch =(event)=>{
+        if (event.key ==="Enter" || event.onClick()){
+            console.log(searchTerm)
+            // alert(searchTerm)
+        }
+    }
     useEffect(()=>{
         const Debounce =setTimeout(()=> {
             const filteredCars = filterCars(searchTerm, data)
@@ -40,15 +49,17 @@ const Search = () => {
             {/*<div className={s.search_box}>*/}
                 <input type="text"
                        value={searchTerm}
-                       autoFocus
-                       autoComplete={'off'}
+                       // autoFocus
+                       // autoComplete={'off'}
                        placeholder={'Search OEM car'}
+                       onKeyDown={handlerEnterSearch}
                        onChange={(e) =>setSearchTerm(e.target.value)}
                        className={s.input_search}
                        style={{width:"200px"}}
                 />
             <button
-                // onClick={BtnHandler}
+                onClick={handlerEnterSearch}
+                onChange={(e) =>setSearchTerm(e.target.value)}
                 className={s.btnSearch}
                 // style={{backgroundImage:"url(./Icon)"}}
             ></button>
