@@ -15,7 +15,7 @@ const TabPage = ({oemList}) => {
     const {loading, error, products} = useProducts()
     const [pageNumber, setPageNumber] = useState(0)
 
-    const carsPerPage = 10
+    const carsPerPage = 14
     const pagesVisited = pageNumber * carsPerPage
     const displayItemCarList = itemCarList
         .slice(pagesVisited, pagesVisited + carsPerPage)

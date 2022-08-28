@@ -36,7 +36,7 @@ function App() {
                 <TabPage oemList={itemCarList}/>
             </div>
 
-            <Modal active={modalActive} setActive={setModalActive}>
+            <Modal active={modalActive} setActive={setModalActive} oemList={itemCarList}>
                 {/*{children}*/}
             </Modal>
 
