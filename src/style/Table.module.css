@@ -83,4 +83,11 @@
     color: #f3f3f3;
     background: #403f50;
 }
-
+.paginationActive a{
+    color: #f3f3f3;
+    background: #403f50;
+}
+.paginationDisabled a:hover{
+    color: #403f50;
+    background: rgba(64, 63, 80, 0.13);
+}
