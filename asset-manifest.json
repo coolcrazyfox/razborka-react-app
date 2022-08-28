@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/razborka-react-app/static/css/main.82371fd5.css",
-    "main.js": "/razborka-react-app/static/js/main.7f8a71d4.js",
+    "main.css": "/razborka-react-app/static/css/main.37522dea.css",
+    "main.js": "/razborka-react-app/static/js/main.b97bf629.js",
     "static/media/IconSearch.svg": "/razborka-react-app/static/media/IconSearch.db4fe6cef6de7ebdaf5e.svg",
     "index.html": "/razborka-react-app/index.html",
-    "main.82371fd5.css.map": "/razborka-react-app/static/css/main.82371fd5.css.map",
-    "main.7f8a71d4.js.map": "/razborka-react-app/static/js/main.7f8a71d4.js.map"
+    "main.37522dea.css.map": "/razborka-react-app/static/css/main.37522dea.css.map",
+    "main.b97bf629.js.map": "/razborka-react-app/static/js/main.b97bf629.js.map"
   },
   "entrypoints": [
-    "static/css/main.82371fd5.css",
-    "static/js/main.7f8a71d4.js"
+    "static/css/main.37522dea.css",
+    "static/js/main.b97bf629.js"
   ]
 }
