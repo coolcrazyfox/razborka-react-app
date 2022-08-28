@@ -21,7 +21,7 @@
 .modal_content{
     /*padding-right: 20px;*/
     border-radius: 12px;
-    background: rgb(185, 210, 203);
+    background: rgb(187, 187, 187);
     transform: scale(0.5);
     transition: 0.4s all;
     /*width: 50vw;*/
@@ -43,8 +43,9 @@
     text-align: left;
     border: none;
     padding: 10px 15px;
-    background: #7cf5a0;
+    background: rgb(64, 63, 80);
     font-size: 14px;
+    color: #f3f3f3;
 }
 .table_modal thead tr th:first-child {
     border-radius: 8px 0 0 8px;
@@ -67,4 +68,8 @@
 }
 .table_modal tbody tr td:last-child {
     border-radius: 0 8px 8px 0;
+}
+.table_modal tbody td a{
+    text-decoration: none;
+    color: #1b2616;
 }
