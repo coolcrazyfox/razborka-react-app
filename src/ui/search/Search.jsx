@@ -30,7 +30,7 @@ const filterCars=(searchText, listOfCars)=>{
 }
 const Search = () => {
     const [modalActive, setModalActive] = useState(false)
-    const [itemCarPag,setItemCarPag]= useState(data.slice(0,50))
+    // const [itemCarPag,setItemCarPag]= useState(data.slice(0,50))
     const [carList, setCarList]= useState(data)
     const [searchTerm, setSearchTerm]= useState('')
     // const handlerEnterSearch =(event)=>{
@@ -73,7 +73,7 @@ const Search = () => {
                 className={s.btnSearch}
                 // style={{backgroundImage:"url(./Icon)"}}
             ></button>
-            <Modal active={modalActive} setActive={setModalActive} oemList={itemCarPag}>
+            <Modal active={modalActive} setActive={setModalActive} oemList={carList}>
                 {/*{children}*/}
             </Modal>
 
